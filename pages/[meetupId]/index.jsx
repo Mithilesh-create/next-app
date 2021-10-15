@@ -27,7 +27,7 @@ export async function getStaticPaths() {
   const data = await MongoCollection.find({}, { _id: 1 }).toArray();
   client.close();
   return {
-    fallback: false,
+    fallback: "blocking",
     paths: data.map((item) => ({
       params: {
         meetupId: item._id.toString(),
