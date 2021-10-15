@@ -1,0 +1,11 @@
+.details {
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.details img {
+  width: 100%;
+}
