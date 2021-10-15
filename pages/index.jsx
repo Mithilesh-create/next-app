@@ -23,7 +23,7 @@ function index(props) {
 // }
 export async function getStaticProps() {
   const client = await MongoClient.connect(
-    "mongodb+srv://admin:UgYBJClx74QzJx0q@cluster0.3tpra.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongodb+srv://admin:UgYBJClx74QzJx0q@cluster0.3tpra.mongodb.net/meetups?retryWrites=true&w=majority"
   );
   const db = await client.db();
   const MongoCollection = db.collection("meetups");

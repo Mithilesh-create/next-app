@@ -20,7 +20,7 @@ function index(props) {
 }
 export async function getStaticPaths() {
   const client = await MongoClient.connect(
-    "mongodb+srv://admin:UgYBJClx74QzJx0q@cluster0.3tpra.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongodb+srv://admin:UgYBJClx74QzJx0q@cluster0.3tpra.mongodb.net/meetups?retryWrites=true&w=majority"
   );
   const db = await client.db();
   const MongoCollection = db.collection("meetups");
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const meetid = context.params.meetupId;
   const client = await MongoClient.connect(
-    "mongodb+srv://admin:UgYBJClx74QzJx0q@cluster0.3tpra.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongodb+srv://admin:UgYBJClx74QzJx0q@cluster0.3tpra.mongodb.net/meetups?retryWrites=true&w=majority"
   );
   const db = await client.db();
   const MongoCollection = db.collection("meetups");
